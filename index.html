@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX&XX 的恋爱宇宙</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 首页 Banner -->
+    <section class="home-banner" id="home">
+        <div class="banner-background"></div>
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1 class="couple-title">XX & XX</h1>
+                <p class="couple-slogan">从遇见你的那天起，风都变甜了</p>
+                <div class="time-counter" id="timeCounter">
+                    <div class="counter-item">
+                        <span class="counter-number" id="days">520</span>
+                        <span class="counter-label">天</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="hours">13</span>
+                        <span class="counter-label">时</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="minutes">14</span>
+                        <span class="counter-label">分</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" id="seconds">25</span>
+                        <span class="counter-label">秒</span>
+                    </div>
+                </div>
+                <div class="next-anniversary">
+                    <p>距离下次纪念日还有 <span id="nextAnniversary">89</span> 天</p>
+                </div>
+            </div>
+        </div>
+        <div class="floating-petals"></div>
+        <div class="stars-background"></div>
+    </section>
+
+    <!-- 核心入口 -->
+    <section class="core-entries">
+        <div class="container">
+            <div class="entry-grid">
+                <a href="#timeline" class="entry-card" data-module="timeline">
+                    <div class="entry-icon"><i class="fas fa-heart"></i></div>
+                    <h3>恋爱时间线</h3>
+                    <p>记录我们的每一个重要时刻</p>
+                </a>
+                <a href="#gallery" class="entry-card" data-module="gallery">
+                    <div class="entry-icon"><i class="fas fa-images"></i></div>
+                    <h3>回忆相册</h3>
+                    <p>珍藏我们的美好瞬间</p>
+                </a>
+                <a href="#checkin" class="entry-card" data-module="checkin">
+                    <div class="entry-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>互动打卡</h3>
+                    <p>一起完成的小目标</p>
+                </a>
+                <a href="#wishlist" class="entry-card" data-module="wishlist">
+                    <div class="entry-icon"><i class="fas fa-star"></i></div>
+                    <h3>愿望清单</h3>
+                    <p>未来想一起做的事</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 恋爱时间线模块 -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title">我们的恋爱时间线</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" data-date="2023.02.14">
+                    <div class="timeline-node">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>第一次遇见</h3>
+                        <p class="timeline-date">2023.02.14</p>
+                        <p class="timeline-text">在咖啡店门口，你撞掉了我的书，也撞进了我的心</p>
+                        <div class="timeline-image">
+                            <img src="https://via.placeholder.com/300x200" alt="第一次遇见">
+                        </div>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> XX咖啡店</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-date="2023.03.20">
+                    <div class="timeline-node">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>正式在一起</h3>
+                        <p class="timeline-date">2023.03.20</p>
+                        <p class="timeline-text">XX公园的樱花树下，我们许下承诺</p>
+                        <div class="timeline-image">
+                            <img src="https://via.placeholder.com/300x200" alt="正式在一起">
+                        </div>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> XX公园</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-date="2023.06.01">
+                    <div class="timeline-node">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>第一次旅行</h3>
+                        <p class="timeline-date">2023.06.01</p>
+                        <p class="timeline-text">一起赶高铁、吃了超辣的火锅、在海边看日出</p>
+                        <div class="timeline-image">
+                            <img src="https://via.placeholder.com/300x200" alt="第一次旅行">
+                        </div>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> 海边城市</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-add-node" id="addTimelineNode">+ 添加新节点</button>
+        </div>
+    </section>
+
+    <!-- 回忆相册模块 -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">回忆相册</h2>
+            <!-- 3D背景特效 -->
+            <div class="gallery-3d-background" id="gallery3DBackground"></div>
+            <!-- 照片墙 -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="daily">日常随拍</button>
+                <button class="filter-btn" data-filter="travel">旅行记录</button>
+                <button class="filter-btn" data-filter="anniversary">纪念日合影</button>
+                <button class="filter-btn" data-filter="food">美食打卡</button>
+            </div>
+            <div class="gallery-stats" id="galleryStats" style="text-align: center; margin: 20px 0; color: #666;">
+                <span>共 <strong id="photoCount">0</strong> 张照片（最多30张）</span>
+            </div>
+            <div class="gallery-wall" id="galleryWall">
+                <!-- 照片将通过JS动态加载 -->
+            </div>
+            <!-- 3D爱心 -->
+            <div class="heart-3d-container" id="heart3D">
+                <!-- 3D爱心将通过JS加载 -->
+            </div>
+            <button class="btn-upload" id="uploadPhoto">+ 上传照片</button>
+        </div>
+    </section>
+
+    <!-- 互动打卡模块 -->
+    <section class="checkin-section" id="checkin">
+        <div class="container">
+            <h2 class="section-title">互动打卡</h2>
+            <div class="checkin-tabs">
+                <button class="tab-btn active" data-tab="daily">日常打卡</button>
+                <button class="tab-btn" data-tab="challenge">挑战打卡</button>
+                <button class="tab-btn" data-tab="calendar">打卡日历</button>
+            </div>
+            <div class="tab-content active" id="dailyCheckin">
+                <div class="checkin-card">
+                    <h3><i class="fas fa-heart"></i> 今日思念</h3>
+                    <textarea placeholder="今天想你了..." id="missingText"></textarea>
+                    <button class="btn-checkin" id="submitMissing">打卡</button>
+                </div>
+                <div class="checkin-card">
+                    <h3><i class="fas fa-tasks"></i> 一起做的事</h3>
+                    <div class="todo-list">
+                        <label><input type="checkbox"> 一起看电影</label>
+                        <label><input type="checkbox"> 一起做饭</label>
+                        <label><input type="checkbox"> 一起运动</label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="challengeCheckin">
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <h4>30天早安晚安打卡</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%"></div>
+                        </div>
+                        <p>已完成 20/30 天</p>
+                        <button class="btn-challenge">继续挑战</button>
+                    </div>
+                    <div class="challenge-card">
+                        <h4>一起读同一本书</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 40%"></div>
+                        </div>
+                        <p>已完成 8/20 章</p>
+                        <button class="btn-challenge">继续挑战</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="calendarCheckin">
+                <div class="checkin-calendar" id="checkinCalendar">
+                    <!-- 日历将通过JS生成 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 愿望清单模块 -->
+    <section class="wishlist-section" id="wishlist">
+        <div class="container">
+            <h2 class="section-title">愿望清单</h2>
+            <div class="wishlist-tabs">
+                <button class="wish-tab active" data-category="short">短期愿望</button>
+                <button class="wish-tab" data-category="long">长期愿望</button>
+                <button class="wish-tab" data-category="travel">旅行清单</button>
+            </div>
+            <div class="wishlist-grid">
+                <div class="wish-card" data-status="pending">
+                    <div class="wish-header">
+                        <h3>一起去云南旅行</h3>
+                        <span class="wish-status">未完成</span>
+                    </div>
+                    <p>打卡大理古城、玉龙雪山，住洱海边的民宿</p>
+                    <p class="wish-date">预计 2024.08</p>
+                    <div class="wish-image">
+                        <img src="https://via.placeholder.com/300x200" alt="云南">
+                    </div>
+                </div>
+                <div class="wish-card" data-status="in-progress">
+                    <div class="wish-header">
+                        <h3>一起看演唱会</h3>
+                        <span class="wish-status">进行中</span>
+                    </div>
+                    <p>去看最爱的歌手的演唱会</p>
+                    <p class="wish-date">预计 2024.06</p>
+                </div>
+                <div class="wish-card" data-status="completed">
+                    <div class="wish-header">
+                        <h3>一起看日出</h3>
+                        <span class="wish-status completed">✓ 已实现</span>
+                    </div>
+                    <p>在山顶看日出，许下心愿</p>
+                    <div class="wish-badge">✓</div>
+                </div>
+            </div>
+            <button class="btn-add-wish" id="addWish">+ 添加愿望</button>
+        </div>
+    </section>
+
+    <!-- 情侣专属模块 -->
+    <section class="couple-exclusive-section" id="exclusive">
+        <div class="container">
+            <h2 class="section-title">情侣专属</h2>
+            <div class="exclusive-grid">
+                <div class="exclusive-card">
+                    <h3><i class="fas fa-tags"></i> 专属昵称墙</h3>
+                    <div class="nickname-wall">
+                        <span class="nickname-tag">宝贝</span>
+                        <span class="nickname-tag">猪猪</span>
+                        <span class="nickname-tag">小笨蛋</span>
+                        <span class="nickname-tag">大英雄</span>
+                    </div>
+                </div>
+                <div class="exclusive-card">
+                    <h3><i class="fas fa-scroll"></i> 恋爱条约</h3>
+                    <div class="love-rules">
+                        <p>不冷战超过 24 小时</p>
+                        <p>吵架后主动拥抱</p>
+                        <p>每年一起拍一套情侣照</p>
+                    </div>
+                </div>
+                <div class="exclusive-card full-width">
+                    <h3><i class="fas fa-comments"></i> 私密留言板</h3>
+                    <div class="message-board">
+                        <div class="message-item">
+                            <p class="message-text">今天也想你了～</p>
+                            <span class="message-time">2024.01.15 14:20</span>
+                        </div>
+                        <div class="message-item">
+                            <p class="message-text">记得按时吃饭哦💕</p>
+                            <span class="message-time">2024.01.14 12:30</span>
+                        </div>
+                    </div>
+                    <div class="message-input">
+                        <textarea placeholder="写一条悄悄话..."></textarea>
+                        <button class="btn-send">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们模块 -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="story-chapters">
+                <div class="chapter">
+                    <h3>遇见：一场不期而遇的巧合</h3>
+                    <p>在那个平凡的午后，我们因为一个偶然的碰撞而相识...</p>
+                </div>
+                <div class="chapter">
+                    <h3>相知：慢慢靠近的心意</h3>
+                    <p>从最初的陌生，到逐渐了解彼此，每一次对话都是心动的理由...</p>
+                </div>
+                <div class="chapter">
+                    <h3>相恋：双向奔赴的勇气</h3>
+                    <p>终于鼓起勇气表达心意，原来我们都在等待这一刻...</p>
+                </div>
+                <div class="chapter">
+                    <h3>未来：余生请多指教</h3>
+                    <p>愿我们能够一直走下去，一起创造更多美好的回忆...</p>
+                </div>
+            </div>
+            <div class="couple-profiles">
+                <div class="profile-card">
+                    <div class="profile-avatar">他</div>
+                    <h4>XX</h4>
+                    <p><strong>星座：</strong>狮子座</p>
+                    <p><strong>爱好：</strong>打球、做饭</p>
+                    <p><strong>性格：</strong>温柔细心</p>
+                    <p><strong>口头禅：</strong>"有我在"</p>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar">她</div>
+                    <h4>XX</h4>
+                    <p><strong>星座：</strong>双鱼座</p>
+                    <p><strong>爱好：</strong>画画、追剧</p>
+                    <p><strong>性格：</strong>活泼可爱</p>
+                    <p><strong>口头禅：</strong>"我不管～"</p>
+                </div>
+            </div>
+            <div class="love-declaration">
+                <h3>我们的爱情宣言</h3>
+                <p class="declaration-text">愿我们：始于初见，陷于陪伴，终于白首</p>
+                <div class="signatures">
+                    <span class="signature">XX</span>
+                    <span class="heart-icon">❤️</span>
+                    <span class="signature">XX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部导航和设置 -->
+    <footer class="footer">
+        <div class="footer-nav">
+            <a href="#home" class="nav-link"><i class="fas fa-home"></i> 首页</a>
+            <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> 相册</a>
+            <a href="#checkin" class="nav-link"><i class="fas fa-calendar-check"></i> 打卡</a>
+            <a href="#wishlist" class="nav-link"><i class="fas fa-star"></i> 愿望</a>
+            <a href="#settings" class="nav-link"><i class="fas fa-cog"></i> 设置</a>
+        </div>
+        <div class="footer-info">
+            <p>©2024 XX&XX 的恋爱网页 | 永远相爱 ❤️</p>
+        </div>
+        <!-- 随机语录 -->
+        <div class="love-quote" id="loveQuote" style="display: none;">
+            <p>今天也比昨天更爱你❤️</p>
+        </div>
+    </footer>
+
+    <!-- 设置弹窗 -->
+    <div class="settings-modal" id="settingsModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>设置</h2>
+            <div class="settings-section">
+                <h3>隐私设置</h3>
+                <label><input type="radio" name="privacy" value="public"> 公开</label>
+                <label><input type="radio" name="privacy" value="couple" checked> 仅情侣可见</label>
+                <label><input type="radio" name="privacy" value="password"> 密码访问</label>
+            </div>
+            <div class="settings-section">
+                <h3>主题设置</h3>
+                <button class="theme-btn" data-theme="pink">温柔粉</button>
+                <button class="theme-btn" data-theme="blue">治愈蓝</button>
+                <button class="theme-btn" data-theme="green">森系绿</button>
+            </div>
+            <div class="settings-section">
+                <h3>数据备份</h3>
+                <button class="btn-backup">导出数据</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 照片查看器 -->
+    <div class="photo-viewer" id="photoViewer">
+        <span class="close-viewer">&times;</span>
+        <img src="" alt="" id="viewerImage">
+        <button class="viewer-nav prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="viewer-nav next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/checkin.js"></script>
+    <script src="js/wishlist.js"></script>
+</body>
+</html>
+
