@@ -1,0 +1,83 @@
+/* ==================== 首页特定样式补充 ==================== */
+
+/* Banner背景图淡入动画 */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+.banner-background {
+    animation: fadeInBackground 2s ease-in;
+}
+
+/* 计数器数字跳动动画 */
+@keyframes numberPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.counter-number {
+    transition: all 0.3s ease;
+}
+
+.counter-number:not(:last-child) {
+    animation: numberPulse 2s ease-in-out infinite;
+    animation-delay: calc(var(--delay, 0) * 0.1s);
+}
+
+/* 入口卡片动画延迟 */
+.entry-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.entry-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.entry-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.entry-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* 响应式优化 */
+@media (max-width: 480px) {
+    .couple-title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    
+    .couple-slogan {
+        font-size: 1.2rem;
+    }
+    
+    .time-counter {
+        gap: 10px;
+    }
+    
+    .counter-item {
+        min-width: 70px;
+        padding: 10px 15px;
+    }
+    
+    .counter-number {
+        font-size: 1.8rem;
+    }
+    
+    .counter-label {
+        font-size: 0.9rem;
+    }
+}
+
+
+
